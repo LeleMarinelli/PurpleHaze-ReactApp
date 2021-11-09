@@ -8,8 +8,8 @@ function App() {
     <NavBar/>
 
     <section className="section1">
-      <h1> Purple Haze App!</h1>
-      <p style={{color: "thistle"}}> ¡Welcome to the world of Purple Haze! </p>
+      <h1> Purple Haze App</h1>
+      <p style={{color: "thistle"}}> ¡ Welcome to the universe of Purple Haze ! </p>
     </section>
 
     </div>

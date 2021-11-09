@@ -38,14 +38,24 @@
 }
 
 .header ul li {
-  margin: 1em 0 0 4em;
+  margin: 0.8em 0 0 4em;
+  color: white;
+  transition: transform 1s;
+}
+
+.header ul li:hover {
+  transform: scale(2);
   color: white;
 }
 
 .header ul li a {
-  color: white;
+  color: rgb(160, 160, 160);
   text-decoration: none;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header ul li a:hover {
+  color: white;
 }
 
 .section1 {
