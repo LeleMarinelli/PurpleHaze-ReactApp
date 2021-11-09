@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.PurpleHazeApp {
+  background-color: rgb(28, 11, 64);
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+
+  min-height: 100vh;
+
+  color: white;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  background-color: black;
+
+  display: flex;
+  margin: auto;
+  padding: 2em 0 2em 2em;
+}
+
+.header ul {
+  display: flex;
+  list-style-type: none;
+  margin-left: 3em;
+
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 10em;
+}
+
+.header ul li {
+  margin: 1em 0 0 4em;
+  color: white;
+}
+
+.header ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  margin-top: 2em;
+
+  font-size: 2em;
+}

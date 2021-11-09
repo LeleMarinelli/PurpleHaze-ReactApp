@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import './style.css'
+import { NavBar } from './components/navBar'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="PurpleHazeApp">
+      
+    <NavBar/>
+
+    <section className="section1">
+      <h1> Purple Haze App!</h1>
+      <p style={{color: "thistle"}}> ¡Welcome to the world of Purple Haze! </p>
+    </section>
+
     </div>
   );
 }
