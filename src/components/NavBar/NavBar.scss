@@ -1,0 +1,66 @@
+.header {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 21%,
+    rgba(83, 0, 179, 0.5189426112241772) 73%,
+    rgba(0, 0, 0, 1) 96%
+  );
+
+  color: white;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  display: flex;
+
+  margin: auto;
+  padding: 0.8em 0 1em 2em;
+
+  width: 100%;
+  height: 5em;
+
+  position: fixed;
+  top: 3em;
+
+  h1 {
+    display: none;
+  }
+
+  .topLogo {
+    padding-left: 2em;
+  }
+
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin-left: 3em;
+
+    justify-content: space-between;
+
+    position: absolute;
+    right: 10em;
+
+    align-items: center;
+
+    li {
+      margin: 1em 0 0 4em;
+      color: white;
+      transition: transform 1s;
+      font-size: 1em;
+      &:hover {
+        transform: scale(2);
+        color: white;
+      }
+
+      a {
+        color: rgb(160, 160, 160);
+        text-decoration: none;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -1,18 +1,22 @@
+// Estilos.
 import './style.css'
-import { NavBar } from './components/navBar'
+
+// Componentes.
+import { NavBar } from './components/NavBar/NavBar'
+
+// CSS de Reactjs Bootstrap.
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 
 function App() {
   return (
-    <div className="PurpleHazeApp">
+    <>
       
     <NavBar/>
+    
+    <ItemListContainer titulo="Purple Haze App" greeting="¡ Welcome to the universe of Purple Haze !" />
 
-    <section className="section1">
-      <h1> Purple Haze App</h1>
-      <p style={{color: "thistle"}}> ¡ Welcome to the universe of Purple Haze ! </p>
-    </section>
-
-    </div>
+    </>
   );
 }
 

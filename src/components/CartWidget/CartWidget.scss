@@ -1,0 +1,13 @@
+.CartWidget {
+  font-size: 4em;
+  position: absolute;
+  right: 1em;
+  top: 0.1em;
+
+  transition: transform 1.5s;
+
+  &:hover {
+    transform: scale(2);
+    color: rgb(118, 6, 238);
+  }
+}

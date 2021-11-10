@@ -1,0 +1,23 @@
+.PurpleHazeApp {
+  background-image: url("https://c.tenor.com/QocKfMLpZKoAAAAC/space-pattern.gif");
+  background-position: center;
+
+  min-height: 100vh;
+
+  color: white;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  padding-top: 5em;
+
+  .section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 2em;
+
+    font-size: 2em;
+  }
+}
