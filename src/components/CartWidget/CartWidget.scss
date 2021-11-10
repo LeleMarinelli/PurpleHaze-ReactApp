@@ -10,4 +10,11 @@
     transform: scale(2);
     color: rgb(118, 6, 238);
   }
+
+  @media (max-width: 991px) {
+    font-size: 6em;
+    position: absolute;
+    right: 0.1em;
+    top: -0.2em;
+  }
 }
