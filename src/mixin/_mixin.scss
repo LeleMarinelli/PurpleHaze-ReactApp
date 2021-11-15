@@ -1,0 +1,70 @@
+$colors: rgb(151, 0, 171), rgb(78, 68, 27), rgb(45, 115, 26), rgb(0, 32, 4),
+  rgb(255, 51, 0);
+
+@mixin letraBrillante($size, $colors) {
+  font-size: $size;
+
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 30px $colors, 0 0 70px $colors,
+    0 0 80px $colors, 0 0 100px $colors, 0 0 140px $colors;
+}
+
+@mixin cuadroBrillante($colors) {
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 25px $colors, 0 0 60px $colors,
+    0 0 60px $colors, 0 0 80px $colors, 0 0 100px $colors;
+}
+
+@mixin cuadroDorado {
+  padding: 1em 2em;
+  border: 0.3em inset rgb(218, 167, 0);
+  border-radius: 1em;
+
+  color: #ffffff;
+  text-shadow: 0em 0em 0.5em black;
+
+  background-image: url("https://img.pixers.pics/pho_wat(s3:700/FO/58/38/42/49/700_FO58384249_cd6cf6efde9d678d57182ce07eb94429.jpg,700,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,650,jpg)/posters-seamless-gold-texture.jpg.jpg");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+
+  // &:active {
+  //   border: 0.3em outset rgb(218, 167, 0);
+  // }
+}
+
+@mixin botonDoradoRedondo {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 25em;
+
+  text-transform: uppercase;
+  font-weight: 800;
+
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4),
+    inset 0 -2px 5px 1px rgba(139, 66, 8, 1),
+    inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+
+  background-image: linear-gradient(
+    160deg,
+    #a54e07,
+    #b47e11,
+    #fef1a2,
+    #bc881b,
+    #a54e07
+  );
+  border: 1px solid #a55d07;
+  color: rgb(120, 50, 5);
+  text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-size: 100% 100%;
+  background-position: center;
+
+  &:hover {
+    background-size: 125% 125%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23),
+      inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    border: 1px solid rgba(165, 93, 7, 0.6);
+    color: rgba(120, 50, 5, 0.8);
+  }
+}

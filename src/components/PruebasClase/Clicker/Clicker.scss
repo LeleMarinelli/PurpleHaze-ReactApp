@@ -1,0 +1,16 @@
+@import "./../../../mixin/mixin";
+
+.ContainerClicker {
+  @include cuadroDorado;
+
+  font-size: 1.5em;
+  font-weight: 700;
+
+  width: 35%;
+  margin: 1em auto;
+
+  button {
+    width: 4em;
+    height: 4em;
+  }
+}

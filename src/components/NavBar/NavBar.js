@@ -1,5 +1,5 @@
 import './NavBar.scss'
-import logo from '../../logoPurple.jpg';
+import logo from '../../logoPurple.png';
 import { CartWidget } from '../CartWidget/CartWidget';
 
 export const NavBar = () => {

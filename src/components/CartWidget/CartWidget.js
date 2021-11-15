@@ -18,6 +18,7 @@ export const CartWidget = () => {
     )
 }
 
+
 // GiAbstract011
 // GiStarSwirl
 // GiRevolt
@@ -29,3 +30,6 @@ export const CartWidget = () => {
 // GiArcher
 // GiBackpack  !!!
 // GiBalloonDog
+
+// GiAlienStare
+//GiAmethyst
