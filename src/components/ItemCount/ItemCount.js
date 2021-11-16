@@ -3,33 +3,38 @@ import "./ItemCount.scss"
 
 import { BsFillEmojiDizzyFill } from 'react-icons/bs';
 import { BsFillEmojiHeartEyesFill } from 'react-icons/bs';
+import { FaThumbsUp } from 'react-icons/fa';
 
+export const ItemCount = ({stock}) => {
+   
 
-export const ItemCount = ({stock, initial}) => {
-
+    const [Counter, setCounter] = useState(1);
     
 
-    const [clicks, setClicks] = useState(0);
-    
-
-    const sumarClicks = () => {
-        if (clicks < stock){
-        setClicks(clicks + 1)}
-        }
+    const sumarCounter = () => {
+        if (stock > Counter){
+        setCounter(Counter+1)} 
+    }
       
-    const restarClicks = () => {
-        if (clicks >= initial){
-        setClicks(clicks - 1)}
-        }
+    const restarCounter = () => {
+        if (Counter > 1){
+        setCounter(Counter - 1)}
+    }
+
+    const alertaAgregar = () => {
+        alert(`Se han agregado ${Counter} productos`)
+    }
 
     return (
         <div className="ContainerClicker">
 
-            <button onClick={restarClicks} className="botonDorado"> < BsFillEmojiDizzyFill className="icon"/> </button>
+            <button onClick={restarCounter} className="botonDorado"> < BsFillEmojiDizzyFill className="icon"/> </button>
             
-            <p>{clicks}</p>
+            <p>{Counter}</p>
 
-            <button onClick={sumarClicks} className="botonDorado"> < BsFillEmojiHeartEyesFill className="icon"/> </button>
+            <button onClick={sumarCounter} className="botonDorado"> < BsFillEmojiHeartEyesFill className="icon"/> </button>
+
+            <button onClick={alertaAgregar} className="botonDorado, botonDoradoAfuera"> < FaThumbsUp className="icon"/> </button>
 
         </div>
     )

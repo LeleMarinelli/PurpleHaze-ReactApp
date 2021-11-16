@@ -22,7 +22,7 @@ export const ItemListContainer = ( {titulo,greeting} ) => {
                 <p>{greeting}</p>
             </section>
 
-        <ItemCount stock='5' initial='1'/>  
+        <ItemCount stock="5"/>  
 
         {/* <button onClick={handleMostrar} className="botonDorado"> ??? </button>
 

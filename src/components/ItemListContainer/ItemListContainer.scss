@@ -26,8 +26,4 @@
       @include letraBrillante(1.5em, (nth($colors, 1)));
     }
   }
-
-  .botonDorado {
-    @include botonDoradoRedondo;
-  }
 }
