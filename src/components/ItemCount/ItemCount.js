@@ -7,16 +7,18 @@ import { BsFillEmojiHeartEyesFill } from 'react-icons/bs';
 
 export const ItemCount = ({stock, initial}) => {
 
+    
 
-    const [clicks, setClicks] = useState([initial]);
+    const [clicks, setClicks] = useState(0);
+    
 
     const sumarClicks = () => {
-        if (clicks < [stock]){
+        if (clicks < stock){
         setClicks(clicks + 1)}
         }
       
     const restarClicks = () => {
-        if (clicks >= [initial]){
+        if (clicks >= initial){
         setClicks(clicks - 1)}
         }
 
