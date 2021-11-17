@@ -10,20 +10,5 @@
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
-  padding-top: 5em;
-
-  .section1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    margin-top: 2em;
-
-    font-size: 2em;
-
-    p {
-      @include letraBrillante(1.5em, (nth($colors, 1)));
-    }
-  }
+  padding: 10em 0 3em 0;
 }

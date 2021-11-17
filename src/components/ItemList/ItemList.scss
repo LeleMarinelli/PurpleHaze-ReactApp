@@ -1,0 +1,28 @@
+@import "./../../mixin/mixin";
+
+.containerItems {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .section1 {
+    font-size: 2em;
+
+    p {
+      @include letraBrillante(1.5em, (nth($colors, 1)));
+    }
+  }
+
+  .itemCard {
+    // @include cuadroBrillante((nth($colors, 3))) background-color: chartreuse;
+    @include cuadroTransparente();
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 12em;
+    height: 20em;
+
+    margin: 1.5em auto;
+  }
+}
