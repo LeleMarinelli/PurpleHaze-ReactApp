@@ -22,7 +22,8 @@ export const ItemCount = ({stock}) => {
     }
 
     const alertaAgregar = () => {
-        alert(`Se han agregado ${Counter} productos`)
+        alert(`Se han agregado ${Counter} productos`);
+        setCounter(1)
     }
 
     return (

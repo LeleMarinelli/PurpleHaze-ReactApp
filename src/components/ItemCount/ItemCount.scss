@@ -4,35 +4,40 @@
   @include cuadroDorado;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   font-size: 1.5em;
-  font-weight: 700;
+  // font-weight: 700;
 
-  width: 35%;
-  margin: 1em auto;
+  width: 8em;
+  height: 2.5em;
+
+  margin-bottom: 2em;
+
+  white-space: normal;
 
   p {
-    font-size: 2em;
-    padding-top: 0.5em;
+    font-size: 1.6em;
+    padding-top: 0.3em;
   }
 
   button {
-    width: 3em;
-    height: 3em;
+    width: 1.6em;
+    height: 1.6em;
 
     @include botonDoradoRedondo;
 
     .icon {
-      font-size: 2em;
+      font-size: 1.1em;
+      margin-bottom: 0.2em;
     }
   }
 
   .botonDoradoAfuera {
-    position: absolute;
-    right: 16em;
-    width: 3.5em;
-    height: 3.5em;
+    // position: absolute;
+    // right: 16em;
+    //   width: 3.5em;
+    //   height: 3.5em;
 
     &:hover {
       color: rgb(30, 169, 44);

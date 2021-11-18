@@ -1,28 +1,37 @@
 @import "./../../mixin/mixin";
 
-.containerItems {
+.section1 {
+  font-size: 2em;
+
+  p {
+    @include letraBrillante(1.5em, (nth($colors, 1)));
+  }
+}
+
+.itemCard {
+  // @include cuadroBrillante((nth($colors, 3))) background-color: chartreuse;
+  @include cuadroEsmerilado((nth($colors, 6)));
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 
-  .section1 {
-    font-size: 2em;
+  width: 13em;
+  height: 23em;
 
-    p {
-      @include letraBrillante(1.5em, (nth($colors, 1)));
-    }
+  margin: 1.5em 1.5em;
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-top: 3em;
+
+  h3 {
+    font-size: 1.5em;
   }
 
-  .itemCard {
-    // @include cuadroBrillante((nth($colors, 3))) background-color: chartreuse;
-    @include cuadroTransparente();
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 12em;
-    height: 20em;
-
-    margin: 1.5em auto;
+  img {
+    width: 10em;
+    height: 10em;
+    // border: 0.1em solid rgb(0, 0, 0);
   }
 }

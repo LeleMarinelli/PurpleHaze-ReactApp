@@ -1,5 +1,5 @@
 $colors: rgb(151, 0, 171), rgb(78, 68, 27), rgb(60, 0, 150), rgb(0, 32, 4),
-  rgb(255, 51, 0);
+  rgb(255, 51, 0), rgb(74, 82, 96);
 
 @mixin letraBrillante($size, $colors) {
   font-size: $size;
@@ -15,8 +15,7 @@ $colors: rgb(151, 0, 171), rgb(78, 68, 27), rgb(60, 0, 150), rgb(0, 32, 4),
 }
 
 @mixin cuadroDorado {
-  padding: 1em 2em;
-  border: 0.3em inset rgb(218, 167, 0);
+  border: 0.2em inset rgb(218, 167, 0);
   border-radius: 1em;
 
   color: #ffffff;
@@ -69,20 +68,22 @@ $colors: rgb(151, 0, 171), rgb(78, 68, 27), rgb(60, 0, 150), rgb(0, 32, 4),
   }
 }
 
-@mixin cuadroTransparente {
-  padding: 1em 2em;
-  border: 0.3em inset rgb(42, 42, 42);
-  border-radius: 1em;
+@mixin cuadroEsmerilado($colors) {
+  border: 0.2em inset $colors;
+  border-radius: 1.2em;
 
   color: #ffffff;
   text-shadow: 0em 0em 0.5em black;
 
-  background-image: url("https://img.pixers.pics/pho_wat(s3:700/FO/58/38/42/49/700_FO58384249_cd6cf6efde9d678d57182ce07eb94429.jpg,700,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,650,jpg)/posters-seamless-gold-texture.jpg.jpg");
+  background-image: url("./../fondo3.png");
   background-position: center;
   background-size: cover;
   text-align: center;
 
-  // &:active {
-  //   border: 0.3em outset rgb(218, 167, 0);
-  // }
+  transition: all 0.1s linear;
+
+  &:hover {
+    // box-shadow: 0 0 0.5em $colors, 0 0 1em $colors, 0 0 2em rgb(29, 29, 29);
+    transform: scale(1.1);
+  }
 }
