@@ -2,7 +2,6 @@ import React from 'react'
 import { Container, Row } from 'react-bootstrap'
 import { ItemCount } from '../ItemCount/ItemCount'
 
-
 import './ItemList.scss'
 
 

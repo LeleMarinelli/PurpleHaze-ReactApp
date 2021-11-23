@@ -1,12 +1,16 @@
 // import React, { useState } from 'react'
 import { useEffect, useState } from 'react'
 
-import { ItemList } from '../ItemList/ItemList'
+
+
+//import { ItemList } from '../ItemList/ItemList'
+
 
 // import { Clicker } from '../PruebasClase/Clicker/Clicker'
 import './ItemListContainer.scss'
 import { pedirDatos } from '../../helpers/pedirDatos'
 import { Loading } from '../Loading/Loading'
+import { ItemDetailContainer } from '../ItemDetailContainer/ItemDetailContainer'
 
 
 
@@ -51,9 +55,13 @@ export const ItemListContainer = () => {
             {loading
                 // ? <h2> Cargando productos...</h2>
                 ? <Loading/>
-                : <ItemList titulo="Purple Haze App" greeting={greeting} productos={productos}/>
-            }
 
+                
+                // : <ItemList titulo="Purple Haze App" greeting={greeting} productos={productos}/> 
+                :<ItemDetailContainer/>
+                
+            }
+ 
         </div>     
     )
 }

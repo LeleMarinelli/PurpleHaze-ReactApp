@@ -1,7 +1,7 @@
 import React from 'react'
 
 //elegir el icono abajo e importar
-import { GiMagicHat } from "react-icons/gi";
+import { GiBuyCard } from "react-icons/gi";
 
 //Estilos
 import './CartWidget.scss'
@@ -12,7 +12,7 @@ export const CartWidget = () => {
     return (
         <div>
             
-            < GiMagicHat className="CartWidget"/>
+            < GiBuyCard className="CartWidget"/>
                         
         </div>
     )
