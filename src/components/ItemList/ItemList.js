@@ -1,6 +1,8 @@
 import React from 'react'
 import { Container, Row } from 'react-bootstrap'
-import { ItemCount } from '../ItemCount/ItemCount'
+// import { ItemCount } from '../ItemCount/ItemCount'
+import { GiThink } from 'react-icons/gi';
+import { Link } from 'react-router-dom';
 
 import './ItemList.scss'
 
@@ -23,9 +25,13 @@ export const ItemList = ( {titulo,greeting,productos} ) => {
                     <div>
                         <h3>{prod.name}</h3>
                         <p>{prod.price} $</p>
-                        <p>{prod.desc}</p>
-                        <ItemCount stock={prod.stock}/>      
+
+                        <Link to={`/detail/${prod.id}`}><button className="botonVerMas"> < GiThink className="icon"/> </button></Link>
+
+                        {/* <ItemCount stock={prod.stock}/>       */}
+                        
                     </div>
+                    
                 </div>    
             )
             )      

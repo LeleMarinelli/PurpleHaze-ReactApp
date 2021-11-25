@@ -112,7 +112,7 @@
     ul {
       display: flex;
       list-style-type: none;
-      margin-left: 3em;
+      margin-right: 3em;
 
       justify-content: space-between;
 
@@ -122,10 +122,10 @@
       align-items: center;
 
       li {
-        margin: 1em 0 0 4em;
+        margin: 0.4em 0 0 4em;
         color: white;
         transition: transform 1s;
-        font-size: 1em;
+        font-size: 1.5em;
         &:hover {
           transform: scale(2);
           color: white;

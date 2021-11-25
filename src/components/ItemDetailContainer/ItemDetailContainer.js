@@ -1,73 +1,53 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react'
+
+import { useParams } from 'react-router'
 
 import './ItemDetailContainer.scss'
-import { Container } from 'react-bootstrap'
+import { Loading } from '../Loading/Loading'
+import { pedirDatos } from '../../helpers/pedirDatos'
+import { ItemDetail } from '../ItemDetail/ItemDetail'
+
+//import { Container } from 'react-bootstrap'
 
 export const ItemDetailContainer = () => {
 
 
-    const [itemPoke, setItemPoke] = useState(null)
+    const [item, setItem] = useState()
+    const [loading, setLoading] = useState(false)
 
-    const [id, setId] = useState(80)
+    const { itemId } = useParams()
 
-    const handleAnterior = () => {
-        id > 80 && setId(id - 1)
-    }
+    console.log(itemId)
 
-    const handleSiguiente = () => {
-        setId(id + 1)
-    }
-
-
+   
     useEffect(() => {
-            
-        fetch(`https://pokeapi.co/api/v2/item/${id}`)
-            .then((respuestaPokeapi)=> respuestaPokeapi.json())
-            .then((data) => {
 
-                setItemPoke({
-                    name: data.name,
-                    img: data.sprites.default
-                }
-                )
+        setLoading(true)
+
+        pedirDatos()
+            .then( resp => {
+                setItem( resp.find( prod => prod.id === Number(itemId)) )
+            })
+            .finally( () => {
+                setLoading(false)
             }
-            )
+       
+        )
+    }, [itemId])
 
-    }, [id])
-
-    console.log(id);
 
 
 
     return (
 
-        <div>
-        <Container>
-            <h2> Catalogo de Objetos </h2>
+        <div className="PurpleHazeApp">
 
-            <div className="itemCard">
+            {
+                loading     ? <Loading/>
+                            : <ItemDetail {...item}/>               
+            }
+            
 
-                {   itemPoke !== null &&
-                                                                    
-                    <>
-                        <h3>{itemPoke.name}</h3>
-                        <img src={itemPoke.img} alt={itemPoke.name} />
-                    </>
-                }
-
-                <div>
-
-                <button className="botonDorado" onClick={handleAnterior}>
-                    Anterior
-                </button>    
-                <button className="botonDorado" onClick={handleSiguiente}>
-                    Siguiente
-                </button>
-                </div>
-               
-            </div>
-        
-        </Container>
         </div>
     )
 }

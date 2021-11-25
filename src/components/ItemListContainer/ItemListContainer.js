@@ -2,15 +2,13 @@
 import { useEffect, useState } from 'react'
 
 
-
-//import { ItemList } from '../ItemList/ItemList'
-
-
 // import { Clicker } from '../PruebasClase/Clicker/Clicker'
 import './ItemListContainer.scss'
 import { pedirDatos } from '../../helpers/pedirDatos'
 import { Loading } from '../Loading/Loading'
-import { ItemDetailContainer } from '../ItemDetailContainer/ItemDetailContainer'
+import { ItemList } from '../ItemList/ItemList'
+import { useParams } from 'react-router'
+
 
 
 
@@ -21,7 +19,7 @@ export const ItemListContainer = () => {
 
     setTimeout(() => {
     setGreeting('Welcome to the PURPLE HAZE branch of the Multiverse!')
-    }, 3000);
+    }, 2000);
 
 
     //Cambios de estado para Loading mientras pide datos..
@@ -29,6 +27,10 @@ export const ItemListContainer = () => {
 
     //Manejo de estados para mostrar productos
     const [productos, setProductos] = useState([])
+
+    const {catId} = useParams()
+
+    console.log(catId);
     
 
     //useEffect para que solo se ejecute cuando se monta el componente.  
@@ -38,7 +40,13 @@ export const ItemListContainer = () => {
         setLoading(true)
         pedirDatos()
             .then( (item) => {
-                setProductos(item)
+
+               if (!catId) {
+                setProductos(item) 
+                } else {
+                setProductos(item.filter( prod => prod.category === catId ))    
+                }
+                
             })
             .catch( (error)=> {
                 console.log(error)
@@ -46,20 +54,15 @@ export const ItemListContainer = () => {
             .finally( ()=> {
                 setLoading(false)
             })
-        }, [])  
+        }, [catId])  
  
 
     return (
         <div className="PurpleHazeApp">
 
-            {loading
-                // ? <h2> Cargando productos...</h2>
-                ? <Loading/>
-
-                
-                // : <ItemList titulo="Purple Haze App" greeting={greeting} productos={productos}/> 
-                :<ItemDetailContainer/>
-                
+            {
+                loading    ? <Loading/>
+                            : <ItemList titulo="Purple Haze App" greeting={greeting} productos={productos}/>               
             }
  
         </div>     
