@@ -51,9 +51,8 @@ export const ItemDetail = ({id, name, price, desc, img, stock, category}) => {
                         botonAgregar={alertaAgregar}
                     />
                  
-                :   <>
-                <Link to="/cart"> < GiBuyCard className="botonItemDetail finish"/> </Link> 
-                </>
+                :<Link to="/cart"> < GiBuyCard className="botonItemDetail finish"/> </Link> 
+                
 
             }
 
