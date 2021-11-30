@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+
 
 //elegir el icono abajo e importar
 import { GiBuyCard } from "react-icons/gi";
@@ -9,11 +11,11 @@ import './CartWidget.scss'
 
 
 export const CartWidget = () => {
+
     return (
         <div>
-            
-            < GiBuyCard className="CartWidget"/>
-                        
+            <Link to="/cart"> < GiBuyCard className="CartWidget"/> </Link>
+                                    
         </div>
     )
 }

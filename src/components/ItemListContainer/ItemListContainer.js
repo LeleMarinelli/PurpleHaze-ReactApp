@@ -10,16 +10,9 @@ import { ItemList } from '../ItemList/ItemList'
 import { useParams } from 'react-router'
 
 
-
-
 export const ItemListContainer = () => {
 
-    //Cambio de estado para cambiar un mje con delay.
-    const [greeting,setGreeting] = useState(' Oh hi stranger... ');
-
-    setTimeout(() => {
-    setGreeting('Welcome to the PURPLE HAZE branch of the Multiverse!')
-    }, 2000);
+    
 
 
     //Cambios de estado para Loading mientras pide datos..
@@ -30,7 +23,14 @@ export const ItemListContainer = () => {
 
     const {catId} = useParams()
 
-    console.log(catId);
+        
+    
+    const [greeting,setGreeting] = useState('Welcome to the PURPLE HAZE branch of the Multiverse! ');
+
+    setTimeout(() => {
+    setGreeting('Find the best resources of the solar system in one page.')
+    }, 5000);
+
     
 
     //useEffect para que solo se ejecute cuando se monta el componente.  
@@ -62,7 +62,7 @@ export const ItemListContainer = () => {
 
             {
                 loading    ? <Loading/>
-                            : <ItemList titulo="Purple Haze App" greeting={greeting} productos={productos}/>               
+                        : <ItemList titulo="Purple Haze App" greeting={greeting} productos={productos}/>               
             }
  
         </div>     

@@ -1,0 +1,28 @@
+@import "./../../mixin/mixin";
+
+.formContainer {
+  margin: auto;
+  width: 25em;
+
+  padding: 1em 1em 4em 1em;
+
+  border: 0.2em inset rgb(174, 174, 174);
+  border-radius: 1.2em;
+
+  @media (max-width: 991px) {
+  }
+
+  .botonHandleSubmit {
+    font-size: 1.3em;
+    @include botonDoradoRedondo;
+
+    width: 3.5em;
+    height: 3.5em;
+
+    margin: 2.5em 6em 1em 6em;
+
+    .icon {
+      font-size: 2.5em;
+    }
+  }
+}

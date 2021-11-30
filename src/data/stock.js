@@ -17,7 +17,7 @@ export const stock = [
             price:1500,
             desc:"Holuuuu sisi, he no",
             img:  cuarzo,
-            stock: 2,
+            stock: 15,
             category: "brute"
         },
         {
@@ -53,7 +53,7 @@ export const stock = [
             price:1500,
             desc:"Holuuuu sisi, he no",
             img:  pirita,
-            stock: 4,
+            stock: 6,
             category: "brute"
         },
         {
@@ -89,11 +89,11 @@ export const stock = [
             price:1500,
             desc:"Holuuuu sisi, he no",
             img:  blueAmber,
-            stock: 1,
+            stock: 2,
             category: "polished"
         },
         {
-            id:10,
+            id:11,
             name:"Jasper",
             price:1500,
             desc:"Holuuuu sisi, he no",

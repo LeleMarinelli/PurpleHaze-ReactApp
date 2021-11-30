@@ -10,6 +10,9 @@ import { NavBar } from './components/NavBar/NavBar'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { FormularioContainer } from './components/FormularioContainer/FormularioContainer';
+import { CartView } from './components/CartView/CartView';
+
 
 
 function App() {
@@ -18,7 +21,7 @@ function App() {
     <BrowserRouter>  
 
       <NavBar/> 
-
+      
       <Routes>
         
         <Route path="/" element={ <ItemListContainer/> }/>
@@ -27,9 +30,14 @@ function App() {
 
         <Route path="/detail/:itemId" element={ <ItemDetailContainer/> }/>
 
+        <Route path="/contact" element={ <FormularioContainer/> }/>
+
+        <Route path="/cart" element={ <CartView/> }/>
+
         <Route path="*" element={ <Navigate to="/"/> }/>
 
       </Routes>
+
 
     </BrowserRouter>
   );
