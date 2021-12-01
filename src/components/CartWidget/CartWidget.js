@@ -13,10 +13,9 @@ import './CartWidget.scss'
 export const CartWidget = () => {
 
     return (
-        <div>
-            <Link to="/cart"> < GiBuyCard className="CartWidget"/> </Link>
-                                    
-        </div>
+        <>
+            <Link to="/cart"> < GiBuyCard className="CartWidget"/> </Link>                                 
+        </>
     )
 }
 
