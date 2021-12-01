@@ -53,7 +53,6 @@ export const ItemDetail = ({id, name, price, desc, img, stock, category}) => {
                  
                 :<Link to="/cart"> < GiBuyCard className="botonItemDetail finish"/> </Link> 
                 
-
             }
 
 
