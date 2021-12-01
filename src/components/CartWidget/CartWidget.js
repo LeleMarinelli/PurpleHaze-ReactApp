@@ -14,7 +14,7 @@ export const CartWidget = () => {
 
     return (
         <div>
-            {/* <Link to="/cart"> < GiBuyCard className="CartWidget"/> </Link> */}
+            <Link to="/cart"> < GiBuyCard className="CartWidget"/> </Link>
                                     
         </div>
     )
