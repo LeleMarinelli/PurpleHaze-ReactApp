@@ -2,18 +2,19 @@ import React, { useContext } from 'react'
 
 import { CartContext } from '../../context/CartContext'
 
-import { BsTrash } from 'react-icons/bs';
-import { GiPayMoney } from 'react-icons/gi';
+
 
 //Estilos
 import './CartView.scss'
 import { CartItem } from './CartItem';
-import { BotoneraVolverYHome } from '../botoneraVolverYHome/BotoneraVolverYHome';
+import { BotoneraVolverYHome } from '../BotoneraVolverYHome/BotoneraVolverYHome';
+import { BotoneraVaciarPagar } from '../BotoneraVaciarPagar/BotoneraVaciarPagar';
+
 
 
 export const CartView = () => {
 
-    const {carrito, vaciarCarrito} = useContext(CartContext)
+    const {carrito} = useContext(CartContext)
 
     return (
 
@@ -28,10 +29,8 @@ export const CartView = () => {
                             }
                         </section>
 
-                        <div>
-                        <button className="botonCartView" onClick={vaciarCarrito}> < BsTrash className="icon 1"/> </button>  
-                        <button className="botonCartView" > < GiPayMoney className="icon 2"/> </button>   
-                        </div>
+                        <BotoneraVaciarPagar/>
+                        
                     </>
                     
                 :<>

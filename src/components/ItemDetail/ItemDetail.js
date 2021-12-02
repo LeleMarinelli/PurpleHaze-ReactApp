@@ -7,7 +7,7 @@ import { ItemCount } from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 import { GiPayMoney } from "react-icons/gi";
 import { CartContext } from '../../context/CartContext';
-import { BotoneraVolverYHome } from '../botoneraVolverYHome/BotoneraVolverYHome';
+import { BotoneraVolverYHome } from '../BotoneraVolverYHome/BotoneraVolverYHome';
 
 export const ItemDetail = ({id, name, price, desc, img, stock, category}) => {
     

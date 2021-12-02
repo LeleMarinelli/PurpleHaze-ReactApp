@@ -16,7 +16,7 @@ export const CartItem = (prod) => {
                             <h3>{prod.name}</h3>
                             <p>Cantidad: {prod.counter}</p>
                             <p>Precio: {prod.price}</p>
-                            <button className="botonEliminarUno" onClick={()=> {sacarDelCarrito(prod.id)}}> < BsTrash className="icon 1"/> </button>  
+                            <button className="botonEliminarUno" onClick={()=> {sacarDelCarrito(prod.id)}}> < BsTrash className="icon"/> </button>  
     </div>
     )
 
