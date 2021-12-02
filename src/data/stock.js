@@ -76,7 +76,7 @@ export const stock = [
         },
         {
             id:8,
-            name:"Piridot",
+            name:"Peridot",
             price:1500,
             desc:"Holuuuu sisi, he no",
             img:  peridot,

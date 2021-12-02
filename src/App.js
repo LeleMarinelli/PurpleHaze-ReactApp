@@ -12,34 +12,48 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { FormularioContainer } from './components/FormularioContainer/FormularioContainer';
 import { CartView } from './components/CartView/CartView';
+import { CartProvider } from './context/CartContext';
+import { CrazyModeProvider } from './context/CrazyMode';
+
+import React from 'react'
+
 
 
 
 function App() {
 
+
+
   return (
-    <BrowserRouter>  
 
-      <NavBar/> 
-      
-      <Routes>
-        
-        <Route path="/" element={ <ItemListContainer/> }/>
-        
-        <Route path="/categories/:catId" element={ <ItemListContainer/> }/>
+    <CrazyModeProvider>
+      <CartProvider>
 
-        <Route path="/detail/:itemId" element={ <ItemDetailContainer/> }/>
+        <BrowserRouter>  
 
-        <Route path="/contact" element={ <FormularioContainer/> }/>
+          <NavBar/> 
+          
+          <Routes>
+            
+            <Route path="/" element={ <ItemListContainer/> }/>
+            
+            <Route path="/categories/:catId" element={ <ItemListContainer/> }/>
 
-        <Route path="/cart" element={ <CartView/> }/>
+            <Route path="/detail/:itemId" element={ <ItemDetailContainer/> }/>
 
-        <Route path="*" element={ <Navigate to="/"/> }/>
+            <Route path="/contact" element={ <FormularioContainer/> }/>
 
-      </Routes>
+            <Route path="/cart" element={ <CartView/> }/>
 
+            <Route path="*" element={ <Navigate to="/"/> }/>
 
-    </BrowserRouter>
+          </Routes>
+
+        </BrowserRouter>
+
+      </CartProvider>
+    </CrazyModeProvider>
+
   );
 }
 

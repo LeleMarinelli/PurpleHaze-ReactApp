@@ -12,22 +12,13 @@
     width: 20em;
   }
 
-  .botonItemDetail {
+  .finish {
     @include botonDoradoRedondo;
 
-    width: 3.5em;
-    height: 3.5em;
-
-    margin: 0 6em 1em 6em;
-
-    .icon {
-      font-size: 2.5em;
-    }
-  }
-
-  .finish {
     width: 5em;
     height: 5em;
+
+    margin: 0 6em 1em 6em;
 
     .icon {
       font-size: 2em;

@@ -2,15 +2,27 @@
   font-size: 4em;
   position: absolute;
   right: 1em;
-  top: 0.1em;
-
-  color: aliceblue;
+  top: -0.3em;
 
   transition: transform 1.5s;
+
+  display: flex;
+
+  .icon {
+    color: aliceblue;
+  }
+
+  p {
+    padding: 0.1em 0 0.1em 0.2em;
+  }
 
   &:hover {
     transform: scale(2);
     color: rgb(118, 6, 238);
+
+    .icon {
+      color: rgb(118, 6, 238);
+    }
   }
 
   @media (max-width: 991px) {

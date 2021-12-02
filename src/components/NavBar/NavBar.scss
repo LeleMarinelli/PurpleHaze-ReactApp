@@ -116,15 +116,11 @@
       list-style-type: none;
       margin-right: 3em;
 
-      justify-content: space-between;
-
       position: absolute;
-      right: 10em;
-
-      align-items: center;
+      right: 12em;
 
       li {
-        margin: 0.4em 0 0 4em;
+        margin: 0.3em 0 0 3em;
         color: white;
         transition: transform 1s;
         font-size: 1.5em;

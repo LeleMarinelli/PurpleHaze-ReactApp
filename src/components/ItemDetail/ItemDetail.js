@@ -1,38 +1,43 @@
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 
 import './ItemDetail.scss'
-import { TiArrowBackOutline } from 'react-icons/ti';
-import { GiHouse } from 'react-icons/gi';
-import { useNavigate } from 'react-router';
+
+
 import { ItemCount } from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
-import { GiBuyCard } from "react-icons/gi";
+import { GiPayMoney } from "react-icons/gi";
+import { CartContext } from '../../context/CartContext';
+import { BotoneraVolverYHome } from '../botoneraVolverYHome/BotoneraVolverYHome';
 
 export const ItemDetail = ({id, name, price, desc, img, stock, category}) => {
+    
+    const {agregarAlCarrito, isInCart} = useContext(CartContext)
 
-    const navigate = useNavigate()
+    
     const [counter, setCounter] = useState(1)
-    const [agregado, setAgregado] = useState(false)
-
-
-    const handleVolver =  () => {
-        navigate(-1)
-    }
-
-    const handleVolverInicio =  () => {
-        navigate('/')
-    }
+ 
 
     const alertaAgregar = () => {
-    
-        console.log('Item agregado:', {
+
+        if (counter > 0) {
+            
+            agregarAlCarrito({
                 id,
                 name,
                 price,
+                img,
                 counter
-        })
+            })
 
-        setAgregado(true)
+            console.log('Item agregado:', {
+                    id,
+                    name,
+                    price,
+                    counter
+            })
+            
+        }
+    
      }
    
 
@@ -43,7 +48,7 @@ export const ItemDetail = ({id, name, price, desc, img, stock, category}) => {
             <p> Hola! Este amuleto vale $ {price}</p>
 
             {
-                !agregado 
+                !isInCart(id) 
                     ?<ItemCount 
                         max={stock} 
                         counter={counter} 
@@ -51,16 +56,11 @@ export const ItemDetail = ({id, name, price, desc, img, stock, category}) => {
                         botonAgregar={alertaAgregar}
                     />
                  
-                :<Link to="/cart"> < GiBuyCard className="botonItemDetail finish"/> </Link> 
+                    :<Link to="/cart"> < GiPayMoney className="finish"/> </Link> 
                 
             }
-
-
-            <div>
-            <button className="botonItemDetail" onClick={handleVolver}> < TiArrowBackOutline className="icon"/> </button>  
-            <button className="botonItemDetail" onClick={handleVolverInicio}> < GiHouse className="icon"/> </button>   
-            </div>
-
+            
+            <BotoneraVolverYHome/>
 
         </div>
     )

@@ -1,0 +1,54 @@
+@import "./../../mixin/mixin";
+
+.tituloCartView {
+  margin-bottom: 2em;
+}
+
+.itemCartView {
+  @include cuadroEsmerilado((nth($colors, 6)));
+
+  width: 70%;
+  height: 11em;
+  display: flex;
+
+  margin: 1em auto 0;
+
+  padding-right: 5em;
+
+  justify-content: space-between;
+  align-items: center;
+
+  .itemDetailPic {
+    width: 10em;
+  }
+
+  p {
+    padding-top: 1em;
+  }
+
+  .botonEliminarUno {
+    @include botonRojoRedondo;
+
+    width: 2.5em;
+    height: 2.5em;
+
+    margin-right: -2em;
+
+    .icon {
+      font-size: 1.8em;
+    }
+  }
+}
+
+.botonCartView {
+  @include botonDoradoRedondo;
+
+  width: 5em;
+  height: 5em;
+
+  margin: 2em 9em 1em 9em;
+
+  .icon {
+    font-size: 3.5em;
+  }
+}
