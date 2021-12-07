@@ -42,6 +42,7 @@ export const Formulario = () => {
     return (
         <form className="container formContainer"  onSubmit={handleSubmit}>
 
+            {values.nombre.length < 2  && <small> Introduzca su nombre</small>}
             <input
                 onChange={handleInputChange}
                 value={values.nombre}
@@ -50,6 +51,8 @@ export const Formulario = () => {
                 type="text"
                 placeholder="nombre"            
             />
+            
+            {values.apellido.length < 2  && <small>Introduzca su apellido</small>}
             <input
                 onChange={handleInputChange}
                 value={values.apellido}
@@ -58,14 +61,23 @@ export const Formulario = () => {
                 type="text"
                 placeholder="apellido"            
             />
+            
+            {values.email.length < 2  && <small>Introduzca su mail</small>}
             <input
                 onChange={handleInputChange}
-                value={values.mail}
+                value={values.email}
                 name="email"
                 className="form-control my-2"
                 type="text"
                 placeholder="Email"            
             />
+            
+
+            {(values.email.length > 2) & values.apellido.length > 2 & values.nombre.length > 2 && <small>Perfecto! <br/> Ahora puedes enviar tu consulta</small>
+
+
+            }
+
            
 
              <button className="botonItemDetail botonHandleSubmit" onClick={handleSubmit}> < GrSend className="icon"/> </button> 

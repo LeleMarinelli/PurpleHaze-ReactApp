@@ -16,32 +16,33 @@ export const CartView = () => {
 
     const {carrito} = useContext(CartContext)
 
+
+
+    if (carrito.length === 0){
+                return (
+                <div className="PurpleHazeApp">
+
+                    <h2 className="tituloCartView">No hay productos en el carrito...</h2>
+                            
+                    <BotoneraVolverYHome/>
+
+                </div>
+                
+                )
+    }
+
     return (
 
         <div className="PurpleHazeApp">
-            
-            {  
-                carrito.length > 0 
-                ?<>     <h2 className="tituloCartView">Carrito de compras</h2>
-                        <section>
-                            {
-                                carrito.map((prod) => <CartItem {...prod} key={prod.id}/>)
-                            }
-                        </section>
 
-                        <BotoneraVaciarPagar/>
-                        
-                    </>
-                    
-                :<>
-                <h2 className="tituloCartView">No hay productos en el carrito...</h2>
-                    
-                <BotoneraVolverYHome/>
+                <h2 className="tituloCartView">Carrito de compras</h2>
+                <section>
+                    {
+                       carrito.map((prod) => <CartItem {...prod} key={prod.id}/>)
+                    }
+                </section>
 
-                </>
-
-
-            }
+                <BotoneraVaciarPagar/>
           
         </div>
 

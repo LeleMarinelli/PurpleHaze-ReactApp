@@ -11,9 +11,10 @@ export const FormularioContainer = () => {
     useEffect(() => {
 
         setTimeout(() => {
-   setLoading(false)
-    }, 1500);
-    }, [])
+            setLoading(false)
+        }, 1500);
+        
+        }, [])
 
    
 

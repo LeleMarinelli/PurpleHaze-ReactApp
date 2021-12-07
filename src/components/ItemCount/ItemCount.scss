@@ -21,11 +21,23 @@
     padding-top: 0.3em;
   }
 
-  button {
+  .botonDorado {
     width: 1.6em;
     height: 1.6em;
 
     @include botonDoradoRedondo;
+
+    .icon {
+      font-size: 1.1em;
+      margin-bottom: 0.2em;
+    }
+  }
+
+  .botonDisable {
+    width: 1.6em;
+    height: 1.6em;
+
+    @include botonDoradoRedondoDisable;
 
     .icon {
       font-size: 1.1em;

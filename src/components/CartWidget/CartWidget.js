@@ -13,28 +13,12 @@ import './CartWidget.scss'
 
 export const CartWidget = () => {
 
-    const {totalCantidad} = useContext(CartContext)
+    const {totalCantidad, carrito} = useContext(CartContext)
 
     return (
-        <div className="CartWidget">
+        <div className={carrito.length === 0 ? 'CartWidgetDisable' : 'CartWidget'}>
             <Link to="/cart" > < HiShoppingCart className="icon"/> </Link>         
             <p>{totalCantidad()}</p>                      
         </div>
     )
 }
-
-
-// GiAbstract011
-// GiStarSwirl
-// GiRevolt
-// GiShoppingBag   !!!
-// GiOpenChest
-// GiMagicHat   !!!
-// GiLockedChest  
-// GiLightBackpack
-// GiArcher
-// GiBackpack  !!!
-// GiBalloonDog
-
-// GiAlienStare
-//GiAmethyst
