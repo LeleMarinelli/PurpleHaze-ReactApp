@@ -29,7 +29,7 @@ export const ItemList = ( {titulo,greeting,productos} ) => {
                     <img src={prod.img} alt={prod.name}/>
                     <div>
                         <h3>{prod.name}</h3>
-                        <p>{prod.price} $</p>
+                        <p>$ {prod.price}</p>
 
                         <Link to={`/detail/${prod.id}`}><button className="botonVerMas"> < GiThink className="icon"/> </button></Link>
 

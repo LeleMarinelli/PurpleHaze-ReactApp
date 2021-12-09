@@ -4,17 +4,18 @@ import { useEffect, useState } from 'react'
 
 // import { Clicker } from '../PruebasClase/Clicker/Clicker'
 import './ItemListContainer.scss'
-import { pedirDatos } from '../../helpers/pedirDatos'
 import { Loading } from '../Loading/Loading'
 import { ItemList } from '../ItemList/ItemList'
 import { useParams } from 'react-router'
+
+//firebase
+import { collection, getDocs, query, where } from '@firebase/firestore/lite'
+import { db } from '../../firebase/config'
 
 
 export const ItemListContainer = () => {
 
     
-
-
     //Cambios de estado para Loading mientras pide datos..
     const [loading, setLoading] = useState(false)
 
@@ -22,8 +23,7 @@ export const ItemListContainer = () => {
     const [productos, setProductos] = useState([])
 
     const {catId} = useParams()
-
-       
+    
     
     const [greeting,setGreeting] = useState('Welcome to the PURPLE HAZE branch of the Multiverse! ');
 
@@ -38,22 +38,29 @@ export const ItemListContainer = () => {
 
     useEffect(  () => {
         setLoading(true)
-        pedirDatos()
-            .then( (item) => {
 
-               if (!catId) {
-                setProductos(item) 
-                } else {
-                setProductos(item.filter( prod => prod.category === catId ))    
-                }
-                
+        // Referencia 
+        const productosRef = collection(db, 'productos')
+
+        const q = catId ? query(productosRef, where('category', '==',catId) ) : productosRef
+        
+
+        // GET lo anterior
+        getDocs(q)
+            .then((collection) => {
+                const item = collection.docs.map((doc)=> ({
+                    id: doc.id,
+                    ...doc.data()
+                }))
+                setProductos(item)
+
             })
-            .catch( (error)=> {
-                console.log(error)
-            })
-            .finally( ()=> {
+            .finally(( )=> {
                 setLoading(false)
             })
+        
+        
+
         }, [catId])  
  
 

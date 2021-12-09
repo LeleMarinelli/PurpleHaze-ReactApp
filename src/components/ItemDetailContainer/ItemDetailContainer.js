@@ -4,8 +4,11 @@ import { useParams } from 'react-router'
 
 import './ItemDetailContainer.scss'
 import { Loading } from '../Loading/Loading'
-import { pedirDatos } from '../../helpers/pedirDatos'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
+
+//firebase
+import { collection, doc, getDoc } from '@firebase/firestore/lite'
+import { db } from '../../firebase/config'
 
 //import { Container } from 'react-bootstrap'
 
@@ -21,15 +24,20 @@ export const ItemDetailContainer = () => {
 
         setLoading(true)
 
-        pedirDatos()
-            .then( resp => {
-                setItem( resp.find( prod => prod.id === Number(itemId)) )
+        const   productosRef = collection(db, 'productos')
+        const docRef = doc(productosRef, itemId)
+        
+        getDoc(docRef)
+            .then((doc) => {
+                setItem({
+                    id: itemId,
+                    ...doc.data()
+                })
             })
-            .finally( () => {
+            .finally(()=>{
                 setLoading(false)
-            }
-       
-        )
+            })
+
     }, [itemId])
 
 
