@@ -18,7 +18,7 @@ export const BotoneraVaciarPagar = () => {
     return (
         <div>
             <button className="botonCartView emptyButton" onClick={vaciarCarrito}> < BsTrash className="icon"/> </button>  
-            <Link to="/cart"> < GiPayMoney className="botonCartView payButton icon"/> </Link>
+            <Link to="/checkout"> < GiPayMoney className="botonCartView payButton icon"/> </Link>
         </div>
     )
 }

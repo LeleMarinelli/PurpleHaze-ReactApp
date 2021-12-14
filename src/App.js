@@ -16,6 +16,7 @@ import { CartProvider } from './context/CartContext';
 import { CrazyModeProvider } from './context/CrazyMode';
 
 import React from 'react'
+import { Checkout } from './components/Checkout/Checkout';
 
 
 
@@ -45,6 +46,8 @@ function App() {
 
             <Route path="/cart" element={ <CartView/> }/>
 
+            <Route path="/checkout" element={ <Checkout/> }/>
+            
             <Route path="*" element={ <Navigate to="/"/> }/>
 
           </Routes>

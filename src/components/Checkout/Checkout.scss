@@ -1,0 +1,20 @@
+@import "./../../mixin/mixin";
+
+.finalizarBoton {
+  @include botonDoradoRedondo;
+
+  width: 5em;
+  height: 5em;
+}
+
+.payButton {
+  box-sizing: border-box;
+  .icon {
+    font-size: 4em;
+    border-radius: 25px;
+  }
+  &:hover {
+    color: rgb(30, 169, 44);
+    transform: scale(1.3);
+  }
+}

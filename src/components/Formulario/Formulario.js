@@ -78,8 +78,6 @@ export const Formulario = () => {
 
             }
 
-           
-
              <button className="botonItemDetail botonHandleSubmit" onClick={handleSubmit}> < GrSend className="icon"/> </button> 
             
         </form>
