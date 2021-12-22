@@ -9,6 +9,22 @@
 
 - ⚡ Fun fact **I'm a fashion and textile designer. i worked as stylist and producer for several audiovisual proyects.**
 
+<h3 align="left">This proyect: Purple Haze App</h3>
+<p align="left"> 
+Este es un un ejemplo de tienda E-commerce, en este caso orientada a vender objetos, especificamente piedras.
+</br>
+Este proyecto, realizado con React Js necesita de las siguientes dependencias y librerias para funcionar:
+<ul>
+<li>React</li>
+<li>React Router</li>
+<li>React Icons</li>
+<li>Bootstrap</li>
+<li>Sass</li>
+<li>SweetAlert</li>
+</ul>
+
+</p>
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://linkedin.com/in/www.linkedin.com/in/leandromarinelli" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="www.linkedin.com/in/leandromarinelli" height="30" width="40" /></a>
