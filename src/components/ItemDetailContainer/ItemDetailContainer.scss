@@ -1,6 +1,0 @@
-@import "./../../mixin/mixin";
-
-h2 {
-  @include letraBrillante(1.5em, (nth($colors, 1)));
-  font-size: 2em;
-}

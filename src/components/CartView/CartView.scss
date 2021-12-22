@@ -2,13 +2,16 @@
 
 .tituloCartView {
   margin-bottom: 2em;
+
+  @media (max-width: 991px) {
+    margin-top: 2em;
+  }
 }
 
 .itemCartView {
   @include cuadroEsmerilado((nth($colors, 6)));
-
   width: 70%;
-  height: 11em;
+  height: 8em;
   display: flex;
 
   margin: 1em auto 0;
@@ -36,6 +39,24 @@
 
     .icon {
       font-size: 1.8em;
+    }
+  }
+
+  @media (max-width: 991px) {
+    width: 100%;
+    .botonEliminarUno {
+      width: 3em;
+      height: 3em;
+
+      margin-right: -4em;
+
+      .icon {
+        font-size: 1.8em;
+      }
+    }
+
+    .itemDetailPic {
+      width: 5em;
     }
   }
 }

@@ -1,14 +1,16 @@
 @import "./../../mixin/mixin";
 
+.formContainer {
+}
+
 .finalizarBoton {
   @include botonDoradoRedondo;
 
   width: 5em;
   height: 5em;
-}
-
-.payButton {
   box-sizing: border-box;
+  margin-top: 2em;
+
   .icon {
     font-size: 4em;
     border-radius: 25px;

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 
 import { useParams } from 'react-router'
 
-import './ItemDetailContainer.scss'
 import { Loading } from '../Loading/Loading'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
 
@@ -10,10 +9,9 @@ import { ItemDetail } from '../ItemDetail/ItemDetail'
 import { collection, doc, getDoc } from '@firebase/firestore/lite'
 import { db } from '../../firebase/config'
 
-//import { Container } from 'react-bootstrap'
+
 
 export const ItemDetailContainer = () => {
-
 
     const [item, setItem] = useState()
     const [loading, setLoading] = useState(false)
@@ -40,9 +38,6 @@ export const ItemDetailContainer = () => {
 
     }, [itemId])
 
-
-
-
     return (
 
         <div className="PurpleHazeApp">
@@ -51,8 +46,7 @@ export const ItemDetailContainer = () => {
                 loading     ? <Loading/>
                             : <ItemDetail {...item}/>               
             }
-            
-
+        
         </div>
     )
 }

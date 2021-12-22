@@ -10,14 +10,14 @@ import './BotoneraVolverYHome.scss'
 export const BotoneraVolverYHome = () => {
     
     const navigate = useNavigate()
+    
     const handleVolver =  () => {
             navigate(-1)
         }
 
-        const handleVolverInicio =  () => {
+    const handleVolverInicio =  () => {
             navigate('/')
         }
-
 
     return (
         <div className="BotoneraVolverYHome">

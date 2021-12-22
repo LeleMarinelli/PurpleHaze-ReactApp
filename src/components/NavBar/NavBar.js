@@ -4,31 +4,68 @@ import logo from '../../logoPurple.png';
 import { CartWidget } from '../CartWidget/CartWidget';
 
 import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BsFillMenuAppFill } from "react-icons/bs";
 
 export const NavBar = () => {
 
-    return <header className='header'>
-    <h1>Purple Haze ✨</h1>
+    const [burgerToggle, setBurgerToggle] = useState(true)
+    const [abrirCerrar, setAbrirCerrar] = useState(false)
 
-    <img className="topLogo" src={logo} alt="Logo Purple Haze" />
+    const burger = () => {
+    setBurgerToggle(!burgerToggle);
+    };
+
+    const menuCat = () => {
+    setAbrirCerrar(!abrirCerrar);
+    };
+
+    const hideMenu = () => {
+        setBurgerToggle(!burgerToggle);
+        setAbrirCerrar(false);
+    };
+
     
-    <nav>
-        <ul>
-            <li> <Link to="/"> Home</Link> </li>
+    
+  
 
-            <li> <Link to="/categories/brute"> Brute </Link> </li>
+    return (
+    <header className='header'>
+        
+        <h1>Purple Haze ✨</h1>
 
-            <li> <Link to="/categories/polished"> Polished </Link> </li>
+        <img className="topLogo" src={logo} alt="Logo Purple Haze" />
+    
+            <nav>
+                <ul className={!burgerToggle ? 'menuVisible': ""} >
+                    <li > <Link to="/" onClick={burger}> Home</Link> </li>
 
-            <li> <Link to="/enciclopedia"> Enciclopedia </Link> </li>
+                    <div className="dropDown">
+                        <li onClick={menuCat}> Categories  </li>
+                        
+                            {
+                                abrirCerrar && (  
+                                <div className="dropDownMenu">
+                                    <li className="dropDownItem"> <Link to="/categories/brute" onClick={hideMenu}> Brute </Link> </li>
+                                    <li className="dropDownItem"> <Link to="/categories/polished" onClick={hideMenu}> Polished </Link> </li>          
+                                </div>
+                                )
+                            }
+                    </div>
+                    
+                    <li> <Link to="/enciclopedia" onClick={burger}> Enciclopedia </Link> </li>
 
-            <li> <Link to="/contact"> Contact us </Link> </li>
-            
-        </ul>
-    </nav>
+                    <li> <Link to="/contact" onClick={hideMenu}> Contact us </Link> </li>                  
+                </ul>
+            </nav>
 
-    <CartWidget/>
+        
+
+        <button className="burger" onClick={hideMenu}> < BsFillMenuAppFill className="icon"/> </button>
+
+        <CartWidget/>
 
     </header>
+    )
 }
 

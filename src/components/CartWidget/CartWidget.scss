@@ -16,27 +16,29 @@
     padding: 0.1em 0 0.1em 0.2em;
   }
 
-  &:hover {
-    transform: scale(2);
-    color: rgb(118, 6, 238);
-
-    .icon {
+  @media (min-width: 991px) {
+    &:hover {
+      transform: scale(2);
       color: rgb(118, 6, 238);
+
+      .icon {
+        color: rgb(118, 6, 238);
+      }
     }
   }
 
   @media (max-width: 991px) {
-    font-size: 6em;
+    font-size: 3.5em;
     position: absolute;
-    right: 0.2em;
-    top: -0.2em;
+    right: 0.5em;
+    top: -0.1em;
   }
 }
 
 .CartWidgetDisable {
   font-size: 4em;
   position: absolute;
-  right: 1em;
+  right: 2em;
   top: -0.3em;
 
   display: flex;
@@ -54,9 +56,9 @@
   }
 
   @media (max-width: 991px) {
-    font-size: 6em;
+    font-size: 3.5em;
     position: absolute;
-    right: 0.2em;
-    top: -0.2em;
+    right: 0.5em;
+    top: -0.1em;
   }
 }

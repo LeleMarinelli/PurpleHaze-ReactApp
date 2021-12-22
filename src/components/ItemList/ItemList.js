@@ -1,18 +1,15 @@
+import './ItemList.scss'
 import React from 'react'
 
 import { Container, Row } from 'react-bootstrap'
 
-
 import { GiThink } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 
-import './ItemList.scss'
 
 
 export const ItemList = ( {titulo,greeting,productos} ) => {
 
-    //Cambio de estado para cambiar un mje con delay.
-   
 
     return (
 
@@ -31,10 +28,7 @@ export const ItemList = ( {titulo,greeting,productos} ) => {
                         <h3>{prod.name}</h3>
                         <p>$ {prod.price}</p>
 
-                        <Link to={`/detail/${prod.id}`}><button className="botonVerMas"> < GiThink className="icon"/> </button></Link>
-
-                        {/* <ItemCount stock={prod.stock}/>       */}
-                        
+                        <Link to={`/detail/${prod.id}`}><button className="botonVerMas"> < GiThink className="icon"/> </button></Link>    
                     </div>
                     
                 </div>    

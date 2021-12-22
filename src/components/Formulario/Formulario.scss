@@ -1,13 +1,17 @@
 @import "./../../mixin/mixin";
 
 .formContainer {
-  margin: auto;
+  margin: 2em auto;
   width: 25em;
 
   padding: 1em 1em 4em 1em;
 
   border: 0.2em inset rgb(174, 174, 174);
   border-radius: 1.2em;
+
+  textarea {
+    height: 7em;
+  }
 
   @media (max-width: 991px) {
   }

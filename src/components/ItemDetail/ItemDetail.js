@@ -2,21 +2,18 @@ import React, {useContext, useState} from 'react'
 
 import './ItemDetail.scss'
 
-
 import { ItemCount } from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 import { GiPayMoney } from "react-icons/gi";
 import { CartContext } from '../../context/CartContext';
 import { BotoneraVolverYHome } from '../BotoneraVolverYHome/BotoneraVolverYHome';
 
-export const ItemDetail = ({id, name, price, desc, img, stock, category}) => {
+export const ItemDetail = ({id, name, price, img, stock }) => {
     
     const {agregarAlCarrito, isInCart} = useContext(CartContext)
-
     
     const [counter, setCounter] = useState(1)
  
-
     const alertaAgregar = () => {
 
         if (counter > 0) {
@@ -35,9 +32,7 @@ export const ItemDetail = ({id, name, price, desc, img, stock, category}) => {
                     price,
                     counter
             })
-            
         }
-    
      }
    
 

@@ -22,4 +22,34 @@
       font-size: 2em;
     }
   }
+
+  @media (max-width: 991px) {
+    .botonItemDetail {
+      width: 6em;
+      height: 6em;
+      position: fixed;
+      bottom: 4.3em;
+      margin: 0;
+
+      &:nth-child(1) {
+        left: 2em;
+      }
+      &:nth-child(2) {
+        right: 2em;
+      }
+
+      .icon {
+        font-size: 4.5em;
+      }
+    }
+
+    .finish {
+      width: 6em;
+      height: 6em;
+
+      .icon {
+        font-size: 4.5em;
+      }
+    }
+  }
 }

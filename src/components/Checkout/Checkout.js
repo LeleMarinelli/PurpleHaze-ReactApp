@@ -9,11 +9,8 @@ import { GiPayMoney, GiPerpendicularRings } from 'react-icons/gi';
 
 import { validarFormulario } from '../../helpers/validarFormulario';
 import { Navigate } from 'react-router';
-import { db } from '../../firebase/config';
-import { collection, Timestamp, writeBatch, query, where, documentId, addDoc,  getDocs} from '@firebase/firestore/lite';
 
-import Swal from 'sweetalert2'
-
+import { generarOrden } from '../../firebase/generarOrden/generarOrden';
 
 
 
@@ -37,77 +34,13 @@ export const Checkout = () => {
     }
   
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault()
 
         if(!validarFormulario(values)) {return}
 
-        const ordenCompra ={
-        comprador:{...values},
-        items:carrito ,
-        total: totalCompra(),
-        date: Timestamp.fromDate( new Date() )
-        }
+        generarOrden(values, carrito, totalCompra, vaciarCarrito)
 
-        const batch = writeBatch(db)
-        
-        const ordersRef = collection(db,"compras")
-        const productosRef = collection(db,"productos")
-        const q = query(productosRef, where(documentId(), 'in', carrito.map(el => el.id)))
-
-        const sinStock = []
-
-        const productos = await getDocs(q)
-
-        productos.docs.forEach((doc) => {
-            const itemUpdate = carrito.find((prod) => prod.id === doc.id)
-
-            if(doc.data().stock >= itemUpdate.counter) {
-                batch.update(doc.ref, {
-                    stock: doc.data().stock - itemUpdate.counter
-                })
-            } else {
-                sinStock.push(itemUpdate)
-            }
-
-        })
-
-        if(sinStock.length === 0) {
-            addDoc(ordersRef, ordenCompra)
-                .then((res) => {
-                    batch.commit()
-                    
-                    Swal.fire({
-                    icon:'success',
-                    title:'Su compra ya se ha enviado',
-                    text:`Su número de orden es: ${res.id}`
-                    })
-
-                    vaciarCarrito()
-                })
-        } else {
-            Swal.fire({
-                icon:'error',
-                title:'Lamentablemente hay falta de stock de los siguientes productos:',
-                text: sinStock.map(el => el.name).join(', ')
-            })
-        } 
-
-        // carrito.forEach((prod) => {
-        //     const docRef = doc(productosRef, prod.id)
-
-        //     getDoc(docRef)
-        //         .then((doc)=> {
-        //             if (doc.data().stock >= prod.counter)
-
-        //             updateDoc(doc.ref, {
-        //                 stock: doc.data().stock - prod.counter
-        //             })
-        //         })
-            
-        // })
-
-        
     }
 
     return (
@@ -171,9 +104,10 @@ export const Checkout = () => {
                             type="text"
                             placeholder="Telefono"            
                         />    
+                <button onClick={handleSubmit} className="finalizarBoton"> < GiPayMoney className="icon"/> </button>
             </form>
 
-                <button onClick={handleSubmit} className="finalizarBoton payButton"> < GiPayMoney className="icon"/> </button>
+                
             </div>
         }
         </>

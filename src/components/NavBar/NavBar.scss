@@ -1,144 +1,169 @@
 .header {
-  @media (max-width: 991px) {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 1) 54%,
-      rgba(60, 4, 124, 0.630987429151348) 79%,
-      rgba(83, 0, 179, 1) 100%
-    );
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 21%,
+    rgba(83, 0, 179, 0.5189426112241772) 73%,
+    rgba(0, 0, 0, 1) 96%
+  );
+  color: white;
 
-    color: white;
-    text-align: center;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.8em;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1;
+  display: flex;
+  z-index: 1;
 
-    margin: auto;
+  margin: auto;
+  padding: 0.8em 0 1em 2em;
 
-    width: 100%;
+  width: 100%;
+  height: 5em;
+
+  position: fixed;
+  top: 3em;
+
+  h1 {
+    display: none;
+  }
+
+  .topLogo {
+    position: absolute;
     height: 4em;
+    top: 0.5em;
+    left: 3em;
+  }
 
-    position: fixed;
-    top: 3em;
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin-right: 3em;
 
-    h1 {
-      display: none;
-    }
+    position: absolute;
+    right: 12em;
 
-    .topLogo {
-      width: auto;
-      height: 4em;
-      padding: 0.5em 0 0.5em 0;
-      position: absolute;
-      left: 2.5em;
-    }
+    li {
+      margin: 0.4em 1.5em 0.4em 1.5em;
+      color: rgb(160, 160, 160);
+      transition: all 1s ease-in-out;
+      font-size: 1.5em;
+      a {
+        color: rgb(160, 160, 160);
+        text-decoration: none;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
 
-    ul {
-      display: none;
-
-      list-style-type: none;
-      width: 100%;
-
-      align-items: center;
-      padding: 0;
-      margin: 0;
-
-      li {
-        padding: 0 2em 0 2em;
-        color: white;
-        transition: transform 1s;
-        font-size: 1em;
-        display: flex;
-
+      @media (min-width: 991px) {
         &:hover {
           transform: scale(2);
           color: white;
+          cursor: pointer;
         }
 
         a {
-          color: rgb(160, 160, 160);
-          text-decoration: none;
-          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          transition: all 1s ease-in-out;
 
           &:hover {
             color: white;
           }
+        }
+      }
+    }
+
+    .dropDown {
+      position: relative;
+
+      .dropDownMenu {
+        position: absolute;
+        left: 0.6em;
+        top: calc(100% + 2em);
+        padding: 1em 0 2em 0;
+        margin: 0;
+
+        background-image: url(../../fondo2.png);
+        background-position: center;
+        background-size: cover;
+
+        border-radius: 1em;
+        border: 0.05em double rgb(105, 105, 105);
+
+        border-radius: 1em 1em 1em 1em;
+        box-shadow: 0 0 5px rgb(0, 0, 0), 0 0 15px rgb(0, 0, 0);
+
+        a {
+          color: white;
+          text-shadow: 0em 0em 1em rgb(0, 0, 0);
         }
       }
     }
   }
 
-  @media (min-width: 992px) {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 1) 21%,
-      rgba(83, 0, 179, 0.5189426112241772) 73%,
-      rgba(0, 0, 0, 1) 96%
-    );
+  .burger {
+    display: none;
+  }
 
-    color: white;
-    text-align: center;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-
-    display: flex;
-    z-index: 1;
-
-    margin: auto;
-    padding: 0.8em 0 1em 2em;
-
-    width: 100%;
-    height: 5em;
-
-    font-size: 0.8em;
-
-    position: fixed;
-    top: 3em;
-
-    @media (max-width: 991px) {
-    }
-
-    h1 {
-      display: none;
-    }
-
+  @media (max-width: 991px) {
     .topLogo {
-      padding-top: 0.4em;
-      padding-left: 2em;
+      position: absolute;
+      height: 4em;
+      top: 0.5em;
+      left: 10em;
+    }
+
+    .burger {
+      display: block;
+      position: fixed;
+      left: 2em;
+      width: 3.5em;
+      height: 3.5em;
+      background: none;
+
+      .icon {
+        font-size: 3.5em;
+        color: white;
+      }
     }
 
     ul {
-      display: flex;
-      list-style-type: none;
-      margin-right: 3em;
+      background-image: url(../../fondo2.png);
+      background-position: center;
+      position: fixed;
+      top: 10em;
+      left: -11em;
 
-      position: absolute;
-      right: 12em;
+      flex-direction: column;
+      padding: 2em 0;
+      margin: 0;
+      width: 48%;
+
+      max-width: 13em;
+      min-width: 9em;
+
+      border: 0.05em double rgb(105, 105, 105);
+
+      border-radius: 1em 1em 1em 1em;
+      box-shadow: 0 0 5px rgb(0, 0, 0), 0 0 15px rgb(0, 0, 0);
+
+      transition: left 0.5s;
 
       li {
-        margin: 0.3em 0 0 3em;
         color: white;
-        transition: transform 1s;
-        font-size: 1.5em;
-        &:hover {
-          transform: scale(2);
+        a {
           color: white;
         }
+      }
 
-        a {
-          color: rgb(160, 160, 160);
-          text-decoration: none;
-          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      .dropDown {
+        position: relative;
 
-          &:hover {
-            color: white;
-          }
+        .dropDownMenu {
+          position: absolute;
+          left: 14em;
         }
       }
+    }
+
+    .menuVisible {
+      left: 2em;
     }
   }
 }

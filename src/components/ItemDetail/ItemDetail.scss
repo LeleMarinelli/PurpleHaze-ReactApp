@@ -6,11 +6,13 @@
   justify-content: space-around;
   align-items: center;
 
-  margin-top: -3.5em;
-
   .itemDetailPic {
     width: 20em;
     height: 20em;
+  }
+
+  p {
+    padding-top: 1em;
   }
 
   .finish {
@@ -23,6 +25,35 @@
 
     .icon {
       font-size: 2em;
+    }
+  }
+
+  @media (max-width: 991px) {
+    margin-top: 2em;
+
+    .itemDetailPic {
+      width: 30em;
+      height: 30em;
+    }
+
+    h2 {
+      font-size: 5em;
+    }
+    p {
+      font-size: 2em;
+    }
+
+    .finish {
+      @include botonDoradoRedondo;
+
+      width: 8em;
+      height: 8em;
+
+      margin: 0 6em 1em 6em;
+
+      .icon {
+        font-size: 2em;
+      }
     }
   }
 }

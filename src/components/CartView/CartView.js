@@ -2,8 +2,6 @@ import React, { useContext } from 'react'
 
 import { CartContext } from '../../context/CartContext'
 
-
-
 //Estilos
 import './CartView.scss'
 import { CartItem } from './CartItem';
@@ -11,12 +9,9 @@ import { BotoneraVolverYHome } from '../BotoneraVolverYHome/BotoneraVolverYHome'
 import { BotoneraVaciarPagar } from '../BotoneraVaciarPagar/BotoneraVaciarPagar';
 
 
-
 export const CartView = () => {
 
     const {carrito} = useContext(CartContext)
-
-
 
     if (carrito.length === 0){
                 return (

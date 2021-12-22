@@ -1,0 +1,48 @@
+.book {
+  padding-bottom: 5em;
+  h2 {
+    padding: 1em 0 1em 0;
+    font-size: 3em;
+  }
+
+  .itemCartView {
+    padding: 1em 1em 1em 2em;
+
+    width: 70%;
+    height: auto;
+
+    p {
+      padding: 0 0 0 1em;
+    }
+  }
+
+  .BotoneraVolverYHome {
+    padding-top: 3em;
+  }
+
+  @media (max-width: 991px) {
+    padding-bottom: 10em;
+    .itemCartView {
+      padding: 1em 1em 2em 2em;
+      height: auto;
+      margin-bottom: 1em;
+
+      flex-direction: column;
+
+      width: 90%;
+
+      h3 {
+        font-size: 3em;
+        margin: 1em auto;
+      }
+      img {
+        width: 20em;
+      }
+
+      p {
+        font-size: 1.5em;
+        padding: 0 0 0 0;
+      }
+    }
+  }
+}

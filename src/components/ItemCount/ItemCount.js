@@ -29,7 +29,7 @@ export const ItemCount = ({max, counter, setCounter,botonAgregar}) => {
 
             <button 
             onClick={botonAgregar} 
-            className={counter === 0 ? "botonDisable " : "botonDorado botonDoradoAfuera"}
+            className={counter === 0 ? "botonDisable " : "botonDorado botonDoradoOk"}
             disabled={counter === 0}
             > < FaThumbsUp className="icon"/> </button>
 
