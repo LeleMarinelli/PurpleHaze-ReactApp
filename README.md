@@ -9,7 +9,7 @@
 
 - ⚡ Fun fact **I'm a fashion and textile designer. i worked as stylist and producer for several audiovisual proyects.**
 
-<h3 align="left">This proyect: Purple Haze App</h3>
+<h3 align="left">Purple Haze App</h3>
 <p align="left"> 
 Este es un un ejemplo de tienda E-commerce, en este caso orientada a vender objetos, especificamente piedras.
 </br>
@@ -19,6 +19,7 @@ Este proyecto, realizado con React Js necesita de las siguientes dependencias y 
 <li>React Router</li>
 <li>React Icons</li>
 <li>Bootstrap</li>
+<li>Firebase</li>
 <li>Sass</li>
 <li>SweetAlert</li>
 </ul>
