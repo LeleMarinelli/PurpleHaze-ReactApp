@@ -11,7 +11,7 @@
 .itemCartView {
   @include cuadroEsmerilado((nth($colors, 6)));
   width: 70%;
-  height: 8em;
+  height: 12em;
   display: flex;
 
   margin: 1em auto 0;
@@ -44,6 +44,8 @@
 
   @media (max-width: 991px) {
     width: 100%;
+    height: 10em;
+
     .botonEliminarUno {
       width: 3em;
       height: 3em;
