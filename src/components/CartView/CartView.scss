@@ -1,7 +1,7 @@
 @import "./../../mixin/mixin";
 
 .tituloCartView {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 
   @media (max-width: 991px) {
     margin-top: 2em;
@@ -60,5 +60,15 @@
     .itemDetailPic {
       width: 5em;
     }
+  }
+}
+
+.textoTotal {
+  font-size: 2em;
+  padding-top: 1em;
+
+  @media (max-width: 991px) {
+    font-size: 3em;
+    padding-top: 1.5em;
   }
 }

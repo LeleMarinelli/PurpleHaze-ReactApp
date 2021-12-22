@@ -11,7 +11,8 @@ import { BotoneraVaciarPagar } from '../BotoneraVaciarPagar/BotoneraVaciarPagar'
 
 export const CartView = () => {
 
-    const {carrito} = useContext(CartContext)
+    const {carrito, totalCompra} = useContext(CartContext)
+    const totalAPagar = totalCompra()
 
     if (carrito.length === 0){
                 return (
@@ -36,6 +37,8 @@ export const CartView = () => {
                        carrito.map((prod) => <CartItem {...prod} key={prod.id}/>)
                     }
                 </section>
+                <p className="textoTotal">El total a pagar es: <br/> ${totalAPagar}</p>
+
 
                 <BotoneraVaciarPagar/>
           
