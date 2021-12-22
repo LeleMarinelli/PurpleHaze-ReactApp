@@ -9,7 +9,7 @@
 
 - ⚡ Fun fact **I'm a fashion and textile designer. i worked as stylist and producer for several audiovisual proyects.**
 
-<h3 align="left">Purple Haze App</h3>
+<h3 align="center"> 🧬 Purple Haze App 🧬 </h3>
 <p align="left"> 
 Este es un un ejemplo de tienda E-commerce, en este caso orientada a vender objetos, especificamente piedras.
 </br>
