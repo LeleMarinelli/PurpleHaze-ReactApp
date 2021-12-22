@@ -27,7 +27,6 @@ export const Formulario = () => {
             {(formik)=>(
                 <form className="container formContainer"  onSubmit={formik.handleSubmit}>
 
-                    {/* {values.nombre.length < 2  && <small> Introduzca su nombre</small>} */}
                     <input
                         onChange={formik.handleChange}
                         value={formik.values.nombre}
@@ -37,7 +36,6 @@ export const Formulario = () => {
                         placeholder="Nombre"            
                     />
                     
-                    {/* {values.apellido.length < 2  && <small>Introduzca su apellido</small>} */}
                     <input
                         onChange={formik.handleChange}
                         value={formik.values.apellido}
@@ -46,8 +44,8 @@ export const Formulario = () => {
                         type="text"
                         placeholder="Apellido"            
                     />
-                    
-                    {/* {values.email.length < 2  && <small>Introduzca su mail</small>} */}
+
+
                     <input
                         onChange={formik.handleChange}
                         value={formik.values.email}
@@ -66,9 +64,6 @@ export const Formulario = () => {
                         placeholder="Que es lo que quieres decirnos?..."            
                     />
                     
-                    {/* {(values.email.length > 2) & values.apellido.length > 2 & values.nombre.length > 2 && <small>Perfecto! <br/> Ahora puedes enviar tu consulta</small> */}
-
-      
                 <button type="submit" className="botonItemDetail botonHandleSubmit"> < GrSend className="icon"/> </button> 
                     
                 </form>
