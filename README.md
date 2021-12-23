@@ -22,6 +22,7 @@ Este proyecto, realizado con React Js necesita de las siguientes dependencias y 
 <li>Firebase</li>
 <li>Sass</li>
 <li>SweetAlert</li>
+<li>Formik</li>
 </ul>
 
 </p>

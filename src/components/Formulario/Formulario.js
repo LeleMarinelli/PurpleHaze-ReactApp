@@ -1,9 +1,11 @@
 import { Formik } from 'formik';
 import React from 'react'
+import Swal from 'sweetalert2'
 
 import { GrSend } from 'react-icons/gr';
 
 import './Formulario.scss'
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -16,11 +18,19 @@ export const Formulario = () => {
         mje:'',
     }
 
+    const navigate = useNavigate()
+
     return (
         <Formik
             initialValues={initialValues}
             onSubmit={(values)=>{ 
-                console.log(values);
+                Swal.fire({
+                    icon:'success',
+                    title:'Su compra mensaje ha sido enviado',
+                    text:`Pronto nos comunicaremos con usted 💖`
+                    })
+                navigate('/')
+                
             }}
         >
            
