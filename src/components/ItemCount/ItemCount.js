@@ -21,17 +21,17 @@ export const ItemCount = ({max, counter, setCounter,botonAgregar}) => {
     return (
         <div className="ContainerClicker">
 
-            <button {...config.restar} > < BsFillEmojiDizzyFill className="icon"/> </button>
+            <button {...config.restar}>< BsFillEmojiDizzyFill className="icon"/></button>
             
             <p>{counter}</p>
 
-            <button {...config.sumar}> < BsFillEmojiHeartEyesFill className="icon"/> </button>
+            <button {...config.sumar}>< BsFillEmojiHeartEyesFill className="icon"/></button>
 
             <button 
             onClick={botonAgregar} 
             className={counter === 0 ? "botonDisable " : "botonDorado botonDoradoOk"}
             disabled={counter === 0}
-            > < FaThumbsUp className="icon"/> </button>
+            >< FaThumbsUp className="icon"/></button>
 
         </div>
     )

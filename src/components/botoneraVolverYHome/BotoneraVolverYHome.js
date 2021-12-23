@@ -21,8 +21,8 @@ export const BotoneraVolverYHome = () => {
 
     return (
         <div className="BotoneraVolverYHome">
-            <button className="botonItemDetail" onClick={handleVolver}> < TiArrowBackOutline className="icon"/> </button>  
-            <button className="botonItemDetail" onClick={handleVolverInicio}> < GiHouse className="icon"/> </button>   
+            <button className="botonItemDetail" onClick={handleVolver}>< TiArrowBackOutline className="icon"/></button>  
+            <button className="botonItemDetail" onClick={handleVolverInicio}>< GiHouse className="icon"/></button>   
         </div>
     )
 }
