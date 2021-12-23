@@ -14,7 +14,6 @@
 }
 
 .itemCard {
-  // @include cuadroBrillante((nth($colors, 3))) background-color: chartreuse;
   @include cuadroEsmerilado((nth($colors, 6)));
   display: flex;
   flex-direction: column;
@@ -28,6 +27,11 @@
   box-sizing: border-box;
   overflow: hidden;
   white-space: wrap;
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+  }
 
   .botonVerMas {
     @include botonDoradoRedondo;

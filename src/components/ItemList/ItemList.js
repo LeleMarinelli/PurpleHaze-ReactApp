@@ -22,7 +22,7 @@ export const ItemList = ( {titulo,greeting,productos} ) => {
   
         <Row> 
             {productos.map( (prod) => (
-                <div className="itemCard" key={prod.id} >
+                <Link className="itemCard" key={prod.id} to={`/detail/${prod.id}`}>
                     <img src={prod.img} alt={prod.name}/>
                     <div>
                         <h3>{prod.name}</h3>
@@ -31,7 +31,7 @@ export const ItemList = ( {titulo,greeting,productos} ) => {
                         <Link to={`/detail/${prod.id}`}><button className="botonVerMas"> < GiThink className="icon"/> </button></Link>    
                     </div>
                     
-                </div>    
+                </Link>    
             )
             )      
             }
