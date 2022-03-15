@@ -3,9 +3,9 @@
 
 - 🔭 I’m currently working on [Purple Haze](https://purplehazevision.000webhostapp.com/)
 
-- 🌱 I’m currently learning **React Js**
+- 🌱 I’m currently learning **Backend Dev**
 
-- 📫 How to reach me **leancymarinelli@gmail.com**
+- 📫 How to reach me **lfabianmarinelli@gmail.com**
 
 - ⚡ Fun fact **I'm a fashion and textile designer. i worked as stylist and producer for several audiovisual proyects.**
 
